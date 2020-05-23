@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "plantae:block/jeweller_workbench_block" },
+		"facing=south": { "model": "plantae:block/jeweller_workbench_block", "y": 180 },
+		"facing=eest": { "model": "plantae:block/jeweller_workbench_block", "y": 90 },
+		"facing=west": { "model": "plantae:block/jeweller_workbench_block", "y": 270 }
+	} 
+}

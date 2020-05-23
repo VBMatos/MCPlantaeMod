@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"WWW",
+		"PEP",
+		"PPP"
+	],
+	"key": {
+		"W": { "tag": "minecraft:wool" },
+		"E": { "item": "minecraft:emerald" },
+		"P": { "tag": "minecraft:planks" }
+	},
+	"result": {
+		"item": "plantae:jeweller_workbench_block"
+	}
+}

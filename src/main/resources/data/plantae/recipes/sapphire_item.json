@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"S"
+	],
+	"key": {
+		"S": { "item": "plantae:sapphire_block" }
+	},
+	"result": {
+		"item": "plantae:sapphire_item",
+		"count": 9
+	}
+}

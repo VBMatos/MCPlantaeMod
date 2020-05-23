@@ -1,0 +1,30 @@
+{
+	"item.plantae.ruby_item": "Ruby",
+	"item.plantae.sapphire_item": "Sapphire",
+	"item.plantae.amethyst_item": "Amethyst",
+
+	"item.plantae.carbon_dust": "Carbon Dust",
+	"item.plantae.crumb_resin": "Crumb of Resin",
+	"item.plantae.steel_ingot": "Steel Ingot",
+	"item.plantae.adamantium_ingot": "Adamantinum Ingot",
+	"item.plantae.vibranium_alloy_ingot": "Vibranium Alloy Ingot",
+	"item.plantae.vibranium_ingot": "Vibranium Ingot",
+                     
+	"item.plantae.adamantium_shovel": "Adamantinum Shovel",
+	"item.plantae.adamantium_pickaxe": "Adamantinum Pickaxe",
+	"item.plantae.adamantium_axe": "Adamantinum Axe",
+	"item.plantae.adamantium_sword": "Adamantinum Sword",
+
+	"block.plantae.ruby_block": "Block of Ruby",
+	"block.plantae.sapphire_block": "Block of Sapphire",
+	"block.plantae.amethyst_block": "Block of Amethyst",
+
+	"block.plantae.jeweller_workbench_block": "Jeweller Workbench",
+	
+	"block.plantae.adamantium_block": "Block of Adamantium",
+	"block.plantae.meteoric_stone": "Meteoric Stone",
+	"block.plantae.vibranium_ore": "Vibranium Ore",
+
+	"entity.minecraft.villager.plantae.jeweller": "Jeweller"
+	
+}

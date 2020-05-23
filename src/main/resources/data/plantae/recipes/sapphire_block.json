@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SSS",
+		"SSS",
+		"SSS"
+	],
+	"key": {
+		"S": { "item": "plantae:sapphire_item" }
+	},
+	"result": {
+		"item": "plantae:sapphire_block"
+	}
+}

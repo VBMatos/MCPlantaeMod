@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"RRR",
+		"RRR",
+		"RRR"
+	],
+	"key": {
+		"R": { "item": "plantae:ruby_item" }
+	},
+	"result": {
+		"item": "plantae:ruby_block"
+	}
+}
