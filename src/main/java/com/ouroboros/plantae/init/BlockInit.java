@@ -8,7 +8,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,17 +20,17 @@ import net.minecraftforge.registries.ObjectHolder;
 public class BlockInit {
 	
 	//Gemstones
-	public static final Block RUBY_BLOCK = null;
-	public static final Block SAPPHIRE_BLOCK = null;
-	public static final Block AMETHYST_BLOCK = null;
+	public static final Block ruby_block = null;
+	public static final Block sapphire_block = null;
+	public static final Block amethyst_block = null;
 
 	//Metals
-	public static final Block ADAMANTIUM_BLOCK = null;
-	public static final Block METEORIC_STONE = null;
-	public static final Block VIBRANIUM_ORE = null;
+	public static final Block adamantium_block = null;
+	public static final Block meteoric_stone = null;
+	public static final Block vibranium_ore = null;
 	
 	//Custom block model
-	public static final Block JEWELLER_WORKBENCH_BLOCK = null;
+	public static final Block jeweller_workbench_block = null;
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
@@ -69,17 +68,19 @@ public class BlockInit {
 
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
+		final ModItemGroup PLANTAE_GROUP = ModItemGroup.PLANTAE_GROUP;
+		
 		//Gemstones
-		event.getRegistry().register(new BlockItem(RUBY_BLOCK, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("ruby_block"));
-		event.getRegistry().register(new BlockItem(SAPPHIRE_BLOCK, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("sapphire_block"));
-		event.getRegistry().register(new BlockItem(AMETHYST_BLOCK, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_block"));
+		event.getRegistry().register(new BlockItem(ruby_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("ruby_block"));
+		event.getRegistry().register(new BlockItem(sapphire_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("sapphire_block"));
+		event.getRegistry().register(new BlockItem(amethyst_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("amethyst_block"));
 		
 		//Metals
-		event.getRegistry().register(new BlockItem(ADAMANTIUM_BLOCK, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("adamantium_block"));
-		event.getRegistry().register(new BlockItem(METEORIC_STONE, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("meteoric_stone"));
-		event.getRegistry().register(new BlockItem(VIBRANIUM_ORE, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("vibranium_ore"));
+		event.getRegistry().register(new BlockItem(adamantium_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("adamantium_block"));
+		event.getRegistry().register(new BlockItem(meteoric_stone, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("meteoric_stone"));
+		event.getRegistry().register(new BlockItem(vibranium_ore, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_ore"));
 		
 		//Custom block models
-		event.getRegistry().register(new BlockItem(JEWELLER_WORKBENCH_BLOCK, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName("jeweller_workbench_block"));
+		event.getRegistry().register(new BlockItem(jeweller_workbench_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("jeweller_workbench_block"));
 	}
 }

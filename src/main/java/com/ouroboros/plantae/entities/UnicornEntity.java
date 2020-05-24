@@ -1,5 +1,6 @@
 package com.ouroboros.plantae.entities;
 
+import com.ouroboros.plantae.init.ItemInit;
 import com.ouroboros.plantae.init.ModEntityType;
 
 import net.minecraft.block.BlockState;
@@ -61,7 +62,7 @@ public class UnicornEntity extends AnimalEntity{
 		
 		this.goalSelector.addGoal(i++, new SwimGoal(this));
 		this.goalSelector.addGoal(i++, new BreedGoal(this, 1.0d));
-		this.goalSelector.addGoal(i++, new TemptGoal(this, 1.1d, Ingredient.fromItems(Items.GOLDEN_APPLE), false));
+		this.goalSelector.addGoal(i++, new TemptGoal(this, 1.1d, Ingredient.fromItems(ItemInit.strawberry), false));
 		this.goalSelector.addGoal(i++, new FollowParentGoal(this, 1.1d));
 		this.goalSelector.addGoal(i++, this.eatGrassGoal);
 		this.goalSelector.addGoal(i++, new WaterAvoidingRandomWalkingGoal(this, 1.0d));
@@ -132,7 +133,7 @@ public class UnicornEntity extends AnimalEntity{
     */
    @Override
    public boolean isBreedingItem(ItemStack stack) {
-      return stack.getItem() == Items.GOLDEN_APPLE;
+      return stack.getItem() == ItemInit.strawberry;
    }
    
    @Override

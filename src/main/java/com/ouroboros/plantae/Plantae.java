@@ -45,6 +45,8 @@ public class Plantae {
     	eventBus.addListener(this::villagerTrades);
     	eventBus.addListener(this::setup);
     	eventBus.addListener(this::doClientStuff);
+
+    	LOGGER.trace("Debug:" + eventBus);
     	
         MinecraftForge.EVENT_BUS.register(this);
         ModEntityType.ENTITY_TYPES.register(eventBus);
@@ -71,14 +73,18 @@ public class Plantae {
     	Int2ObjectMap<List<ITrade>> trades = event.getTrades();
     	
     	if(event.getType() == ModVillagerProfession.JEWELLER) {
-    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.EMERALD, 9), new ItemStack(ItemInit.SAPPHIRE, 1), 5, 10, 0f));
-    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.SAPPHIRE, 1), new ItemStack(Items.EMERALD, 8), 5, 10, 0f));
+    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.EMERALD, 8), new ItemStack(ItemInit.sapphire_item, 1), 8, 10, 0f));
+    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.IRON_NUGGET, 15), new ItemStack(Items.EMERALD, 1), 16, 10, 0f));
+    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.sapphire_item, 1), new ItemStack(Items.EMERALD, 7), 8, 10, 0f));
     		
-    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.SAPPHIRE, 9), new ItemStack(ItemInit.RUBY, 1), 5, 10, 0f));
-    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.RUBY, 1), new ItemStack(ItemInit.SAPPHIRE, 8), 5, 10, 0f));
+    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.sapphire_item, 8), new ItemStack(ItemInit.ruby_item, 1), 8, 10, 0f));
+    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(Items.GOLD_NUGGET, 15), new ItemStack(ItemInit.sapphire_item, 1), 16, 10, 0f));
+    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 1), new ItemStack(ItemInit.sapphire_item, 7), 8, 10, 0f));
     	
-    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.RUBY, 9), new ItemStack(ItemInit.AMETHYST, 1), 5, 10, 0f));
-    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.AMETHYST, 1), new ItemStack(ItemInit.RUBY, 8), 5, 10, 0f));
+    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 8), new ItemStack(ItemInit.amethyst_item, 1), 8, 10, 0f));
+    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 1), new ItemStack(ItemInit.ruby_item, 7), 8, 10, 0f));
+
+    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 1), new ItemStack(ItemInit.strawberry, 5), 8, 10, 0f));
     		
     		TradeBuilder.forEachLevel((level, tradeBuild) -> trades.get(level.intValue()).add(tradeBuild.build()));
     	}

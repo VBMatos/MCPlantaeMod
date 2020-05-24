@@ -10,7 +10,7 @@ import net.minecraft.util.LazyValue;
 
 public enum ModItemTier implements IItemTier{
 
-	ADAMANTIUM_TOOL(4, 1500, 15.0f, 7.0f, 250, () -> { return Ingredient.fromItems(ItemInit.ADAMANTIUM_INGOT); });
+	ADAMANTIUM_TOOL(4, 1500, 15.0f, 7.0f, 250, () -> { return Ingredient.fromItems(ItemInit.adamantium_ingot); });
 	
 	private final int harvestLevel;
 	private final int maxUses;

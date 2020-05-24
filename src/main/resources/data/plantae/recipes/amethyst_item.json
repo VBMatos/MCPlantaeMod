@@ -1,13 +1,13 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"R"
+		"A"
 	],
 	"key": {
-		"R": { "item": "plantae:ruby_block" }
+		"A": { "item": "plantae:amethyst_block" }
 	},
 	"result": {
-		"item": "plantae:ruby_item",
+		"item": "plantae:amethyst_item",
 		"count": 9
 	}
 }

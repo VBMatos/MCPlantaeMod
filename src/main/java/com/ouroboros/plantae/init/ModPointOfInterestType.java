@@ -19,6 +19,6 @@ public class ModPointOfInterestType {
 	@SubscribeEvent
 	public static void registerPointOfInterestTypes(Register<PointOfInterestType> event) {
 		event.getRegistry().register(PlantaeUtility.pointOfInterestType(
-				"jeweller_workbench", PlantaeUtility.getAllStates(BlockInit.JEWELLER_WORKBENCH_BLOCK), 1, 1).setRegistryName(Plantae.MOD_ID, "jeweller_workbench"));
+				"jeweller_workbench", PlantaeUtility.getAllStates(BlockInit.jeweller_workbench_block), 1, 1).setRegistryName(Plantae.MOD_ID, "jeweller_workbench"));
 	}
 }

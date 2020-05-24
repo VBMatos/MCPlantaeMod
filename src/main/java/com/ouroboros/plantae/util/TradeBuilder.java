@@ -19,7 +19,7 @@ public class TradeBuilder
     private static final List<List<TradeBuilder>> TRADES_LIST = new ArrayList<>();
     
     static {
-        for(int i = 0; i <= 6; ++i) {
+        for(int i = 0; i <= 4; ++i) {
             TradeBuilder.TRADES_LIST.add(new ArrayList<TradeBuilder>());
         }
     }
@@ -48,21 +48,6 @@ public class TradeBuilder
         TradeBuilder.forEachLevel((level, tradeBuilder) -> consumer.accept(tradeBuilder));
     }
     
-    public static void forEachWanderer(Consumer<TradeBuilder> consumer) {
-        List<TradeBuilder> list = TradeBuilder.TRADES_LIST.get(5);
-        
-        for(TradeBuilder tradeBuilder : list) {
-            consumer.accept(tradeBuilder);
-        }
-    }
-    
-    public static void forEachWandererRare(Consumer<TradeBuilder> consumer) {
-        List<TradeBuilder> list = TradeBuilder.TRADES_LIST.get(6);
-        
-        for(TradeBuilder tradeBuilder : list) {
-            consumer.accept(tradeBuilder);
-        }
-    }
     
     protected Function<Random, ItemStack> price;
     protected Function<Random, ItemStack> price2;
@@ -154,7 +139,6 @@ public class TradeBuilder
         return (random) -> new ItemStack(item, random.nextInt(max) + min);
     }
     
-    // --- registering stuff ---
     
     protected TradeBuilder register(int index) {
         TradeBuilder.register(index, this);
@@ -166,9 +150,5 @@ public class TradeBuilder
      */
     public TradeBuilder registerLevel(int level) {
         return this.register(level - 1);
-    }
-    
-    public TradeBuilder registerWanderer(boolean rare) {
-        return this.register(rare ? 6 : 5);
     }
 }

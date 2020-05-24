@@ -1,4 +1,8 @@
 {
+	"itemGroup.plantae_tab": "Plantae Mod",
+
+	"item.plantae.strawberry": "Strawberry",
+
 	"item.plantae.ruby_item": "Ruby",
 	"item.plantae.sapphire_item": "Sapphire",
 	"item.plantae.amethyst_item": "Amethyst",
@@ -26,5 +30,4 @@
 	"block.plantae.vibranium_ore": "Vibranium Ore",
 
 	"entity.minecraft.villager.plantae.jeweller": "Jeweller"
-	
 }
