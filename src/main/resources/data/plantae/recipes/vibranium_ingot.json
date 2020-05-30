@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "plantae:vibranium_ore"
+	},
+	"result": "plantae:vibranium_ingot",
+	"experience": 10.0,
+	"cookingtime": 300
+}

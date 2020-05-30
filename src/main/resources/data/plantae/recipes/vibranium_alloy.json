@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"VSV",
+		"SVS",
+		"VSV"
+	],
+	"key": {
+		"V": { "item": "plantae:vibranium_ingot" },
+		"S": { "item": "plantae:steel_ingot" }		
+	},
+	"result": {
+		"item": "plantae:vibranium_alloy_ingot"
+	}
+}

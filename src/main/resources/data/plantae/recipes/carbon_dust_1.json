@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "minecraft:coal"
+	},
+	"result": "plantae:carbon_dust",
+	"experience": 10.0,
+	"cookingtime": 200
+}
