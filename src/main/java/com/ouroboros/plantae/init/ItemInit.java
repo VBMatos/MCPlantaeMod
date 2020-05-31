@@ -48,6 +48,9 @@ public class ItemInit {
 	public static final Item adamantium_leggins = null;
 	public static final Item adamantium_boots = null;
 	
+	//Spawn Eggs
+	public static final Item unicorn_spawn_egg = null;
+	
 	//Food
 	public static final Item strawberry = null;
 	
@@ -83,9 +86,12 @@ public class ItemInit {
 		registry.register(new ArmorItem(ModArmorMaterial.ADAMANTIUM, EquipmentSlotType.CHEST, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("adamantium_chestplate"));
 		registry.register(new ArmorItem(ModArmorMaterial.ADAMANTIUM, EquipmentSlotType.LEGS, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("adamantium_leggins"));
 		registry.register(new ArmorItem(ModArmorMaterial.ADAMANTIUM, EquipmentSlotType.FEET, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("adamantium_boots"));
+
+		//Spawn Egg
+		registry.register(new ModSpawnEggItem(ModEntityType.UNICORN_ENTITY, 0xffffff, 0x8b00a5, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("unicorn_spawn_egg"));
 		
 		//Food
-		registry.register(new Item(new Item.Properties().group(PLANTAE_GROUP).food(ModFood.strawberry)).setRegistryName("strawberry"));
+		registry.register(new Item(new Item.Properties().group(PLANTAE_GROUP).food(ModFood.STRAWBERRY)).setRegistryName("strawberry"));
 	}
 }
 

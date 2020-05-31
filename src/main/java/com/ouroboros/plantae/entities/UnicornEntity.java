@@ -6,9 +6,7 @@ import com.ouroboros.plantae.init.ModEntityType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.BreedGoal;
 import net.minecraft.entity.ai.goal.EatGrassGoal;
 import net.minecraft.entity.ai.goal.FollowParentGoal;
@@ -17,13 +15,10 @@ import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
-import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -44,12 +39,15 @@ public class UnicornEntity extends AnimalEntity{
 
 	@Override
 	public AgeableEntity createChild(AgeableEntity ageable) {
+		return ModEntityType.UNICORN_ENTITY.get().create(this.world);
+		/*
 		UnicornEntity unicorn = new UnicornEntity(ModEntityType.UNICORN_ENTITY.get(), this.world);
 		
 		unicorn.onInitialSpawn(this.world, this.world.getDifficultyForLocation(new BlockPos(unicorn)), 
-				SpawnReason.BREEDING, (ILivingEntityData)null, (CompoundNBT)null);
+				SpawnReason.BREEDING, null, (CompoundNBT)null);
 		
 		return unicorn;
+		*/
 	}
 	
 	@Override
