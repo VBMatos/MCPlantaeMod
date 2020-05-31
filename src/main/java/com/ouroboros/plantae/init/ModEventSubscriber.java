@@ -1,8 +1,5 @@
 package com.ouroboros.plantae.init;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.ouroboros.plantae.Plantae;
 
 import net.minecraft.entity.EntityType;
@@ -21,7 +18,7 @@ import net.minecraftforge.fml.config.ModConfig;
 @EventBusSubscriber(modid = Plantae.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber {
 
-	private static final Logger LOGGER = LogManager.getLogger(Plantae.MOD_ID + " Mod Event Subscriber");
+	//private static final Logger LOGGER = LogManager.getLogger(Plantae.MOD_ID + " Mod Event Subscriber");
 
 	/**
 	 * This method will be called by Forge when it is time for the mod to register its Items.

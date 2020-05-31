@@ -9,9 +9,6 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 
 // Made with Blockbench 3.5.0
 // Exported for Minecraft version 1.15
-// Paste this class into your mod and generate all required imports
-
-
 public class UnicornEntityModel<T extends UnicornEntity> extends EntityModel<T> {
 	private final ModelRenderer body;
 	private final ModelRenderer tail;
@@ -27,13 +24,8 @@ public class UnicornEntityModel<T extends UnicornEntity> extends EntityModel<T> 
 	private final ModelRenderer head;
 	private final ModelRenderer mouth_top;
 	private final ModelRenderer mouth_bottom;
-	private final ModelRenderer horn;
-	private final ModelRenderer horn1;
-	private final ModelRenderer horn2;
-	private final ModelRenderer horn3;
-	private final ModelRenderer horn4;
 
-	public UnicornEntityModel() {
+	public UnicornEntityModel() {//func_228303_a_
 		textureWidth = 104;
 		textureHeight = 93;
 
@@ -116,6 +108,9 @@ public class UnicornEntityModel<T extends UnicornEntity> extends EntityModel<T> 
 		head.setTextureOffset(30, 60).func_228303_a_(-2.0F, -14.4349F, 1.2706F, 1.0F, 2.0F, 1.0F, 0.0F, false);
 		head.setTextureOffset(24, 54).func_228303_a_(2.0F, -15.4349F, 1.2706F, 1.0F, 3.0F, 1.0F, 0.0F, false);
 		head.setTextureOffset(30, 54).func_228303_a_(1.0F, -14.4349F, 1.2706F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+		head.setTextureOffset(97, 52).func_228303_a_(-0.25F, -19.5987F, -0.962F, 0.5F, 2.0F, 0.5F, 0.0F, false);
+		head.setTextureOffset(97, 54).func_228303_a_(-0.5F, -17.5987F, -1.212F, 1.0F, 3.0F, 1.0F, 0.0F, false);
+		head.setTextureOffset(97, 57).func_228303_a_(-0.75F, -14.5987F, -1.462F, 1.5F, 3.0F, 1.5F, 0.0F, false);
 
 		mouth_top = new ModelRenderer(this);
 		mouth_top.setRotationPoint(0.0F, -11.8412F, -7.3068F);
@@ -126,36 +121,6 @@ public class UnicornEntityModel<T extends UnicornEntity> extends EntityModel<T> 
 		mouth_bottom.setRotationPoint(0.0F, -9.3412F, -3.3068F);
 		head.addChild(mouth_bottom);
 		mouth_bottom.setTextureOffset(1, 60).func_228303_a_(-2.0F, -0.0937F, -7.4226F, 4.0F, 2.0F, 7.0F, 0.0F, false);
-
-		horn = new ModelRenderer(this);
-		horn.setRotationPoint(0.15F, -12.6877F, -0.363F);
-		head.addChild(horn);
-		setRotationAngle(horn, 0.0F, 0.7854F, 0.0F);
-		
-
-		horn1 = new ModelRenderer(this);
-		horn1.setRotationPoint(0.2F, 0.6F, 0.6F);
-		horn.addChild(horn1);
-		setRotationAngle(horn1, 0.0524F, 0.0F, -0.0524F);
-		horn1.setTextureOffset(97, 53).func_228303_a_(-0.0576F, -6.9993F, -0.905F, 0.75F, 7.0F, 0.75F, 0.0F, false);
-
-		horn2 = new ModelRenderer(this);
-		horn2.setRotationPoint(0.2F, 0.6F, -0.15F);
-		horn.addChild(horn2);
-		setRotationAngle(horn2, -0.0524F, 0.0F, -0.0524F);
-		horn2.setTextureOffset(97, 53).func_228303_a_(-0.0576F, -6.9026F, -0.9389F, 0.75F, 7.0F, 0.75F, 0.0F, false);
-
-		horn3 = new ModelRenderer(this);
-		horn3.setRotationPoint(-0.55F, 0.6F, 0.35F);
-		horn.addChild(horn3);
-		setRotationAngle(horn3, 0.0524F, 0.0F, 0.0524F);
-		horn3.setTextureOffset(97, 53).func_228303_a_(-0.0965F, -7.0304F, -0.6525F, 0.75F, 7.0F, 0.75F, 0.0F, false);
-
-		horn4 = new ModelRenderer(this);
-		horn4.setRotationPoint(-0.55F, 0.6F, -0.4F);
-		horn.addChild(horn4);
-		setRotationAngle(horn4, -0.0524F, 0.0F, 0.0524F);
-		horn4.setTextureOffset(97, 53).func_228303_a_(-0.0965F, -6.9773F, -0.6934F, 0.75F, 7.0F, 0.75F, 0.0F, false);
 	}
 
 	@Override
@@ -173,7 +138,7 @@ public class UnicornEntityModel<T extends UnicornEntity> extends EntityModel<T> 
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
 	}
-
+	
 	@Override
 	public void setLivingAnimations(T entityIn, float limbSwing, float limbSwingAmount, float partialTick) {
 		super.setLivingAnimations(entityIn, limbSwing, limbSwingAmount, partialTick);
