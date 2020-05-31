@@ -50,15 +50,15 @@ public class BlockInit {
 		//Metals
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(7.0F, 6.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("adamantium_block"));
+						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("adamantium_block"));
 		
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(7.0F, 6.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("meteoric_stone"));
+						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("meteoric_stone"));
 		
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(7.0F, 6.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_ore"));
+						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_ore"));
 		
 		//Custom block model
 		event.getRegistry().register(
