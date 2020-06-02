@@ -38,9 +38,8 @@ public class TradeBuilder
         for(int i = 1; i <= 5; ++i) {
             list = TradeBuilder.TRADES_LIST.get(i - 1);
             
-            for(TradeBuilder tradeBuilder : list) {
+            for(TradeBuilder tradeBuilder : list)
                 consumer.accept(i, tradeBuilder);
-            }
         }
     }
     

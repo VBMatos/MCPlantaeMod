@@ -11,6 +11,7 @@ import com.ouroboros.plantae.init.ModPointOfInterestType;
 import com.ouroboros.plantae.init.ModVillagerProfession;
 import com.ouroboros.plantae.util.PlantaeUtility;
 import com.ouroboros.plantae.util.TradeBuilder;
+import com.ouroboros.plantae.world.gen.ModOreGen;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.entity.merchant.villager.VillagerTrades.ITrade;
@@ -22,13 +23,16 @@ import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 
 @Mod("plantae")
+@Mod.EventBusSubscriber(modid=Plantae.MOD_ID, bus=Bus.MOD)
 public class Plantae {
 	
 	public static final Logger LOGGER = LogManager.getLogger();
@@ -43,6 +47,7 @@ public class Plantae {
     	final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
     	eventBus.addListener(this::init);
     	eventBus.addListener(this::villagerTrades);
+    	eventBus.addListener(this::loadCompleteEvent);
     	eventBus.addListener(this::setup);
     	eventBus.addListener(this::doClientStuff);
 
@@ -68,7 +73,13 @@ public class Plantae {
     public void onServerStarting(FMLServerStartingEvent event) {
     	
     }
+
+    @SubscribeEvent
+    public void loadCompleteEvent(FMLLoadCompleteEvent event) {
+    	ModOreGen.generateOre();
+	}
     
+    @SubscribeEvent
     public void villagerTrades(VillagerTradesEvent event) {
     	Int2ObjectMap<List<ITrade>> trades = event.getTrades();
     	
@@ -82,9 +93,10 @@ public class Plantae {
     		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 1), new ItemStack(ItemInit.sapphire_item, 7), 8, 10, 0f));
     	
     		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 8), new ItemStack(ItemInit.amethyst_item, 1), 8, 10, 0f));
+    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(Items.LAPIS_LAZULI, 15), new ItemStack(ItemInit.ruby_item, 1), 16, 10, 0f));
     		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 1), new ItemStack(ItemInit.ruby_item, 7), 8, 10, 0f));
 
-    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 1), new ItemStack(ItemInit.strawberry, 5), 8, 10, 0f));
+    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 2), new ItemStack(ItemInit.strawberry, 5), 8, 10, 0f));
     		
     		TradeBuilder.forEachLevel((level, tradeBuild) -> trades.get(level.intValue()).add(tradeBuild.build()));
     	}
