@@ -85,18 +85,16 @@ public class Plantae {
     	
     	if(event.getType() == ModVillagerProfession.JEWELLER) {
     		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.EMERALD, 8), new ItemStack(ItemInit.sapphire_item, 1), 8, 10, 0f));
-    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.IRON_NUGGET, 15), new ItemStack(Items.EMERALD, 1), 16, 10, 0f));
-    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.sapphire_item, 1), new ItemStack(Items.EMERALD, 7), 8, 10, 0f));
+    		trades.get(1).add((entity, random) -> new MerchantOffer(new ItemStack(Items.IRON_NUGGET, 20), new ItemStack(Items.EMERALD, 1), 16, 10, 0f));
     		
     		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.sapphire_item, 8), new ItemStack(ItemInit.ruby_item, 1), 8, 10, 0f));
-    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(Items.GOLD_NUGGET, 15), new ItemStack(ItemInit.sapphire_item, 1), 16, 10, 0f));
-    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 1), new ItemStack(ItemInit.sapphire_item, 7), 8, 10, 0f));
+    		trades.get(2).add((entity, random) -> new MerchantOffer(new ItemStack(Items.GOLD_NUGGET, 20), new ItemStack(ItemInit.sapphire_item, 1), 16, 10, 0f));
     	
     		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.ruby_item, 8), new ItemStack(ItemInit.amethyst_item, 1), 8, 10, 0f));
-    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(Items.LAPIS_LAZULI, 15), new ItemStack(ItemInit.ruby_item, 1), 16, 10, 0f));
-    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 1), new ItemStack(ItemInit.ruby_item, 7), 8, 10, 0f));
+    		trades.get(3).add((entity, random) -> new MerchantOffer(new ItemStack(Items.LAPIS_LAZULI, 20), new ItemStack(ItemInit.ruby_item, 1), 16, 10, 0f));
 
-    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 2), new ItemStack(ItemInit.strawberry, 5), 8, 10, 0f));
+    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 3), new ItemStack(ItemInit.strawberry, 5), 8, 10, 0f));
+    		trades.get(4).add((entity, random) -> new MerchantOffer(new ItemStack(ItemInit.amethyst_item, 3), new ItemStack(ItemInit.grape, 5), 8, 10, 0f));
     		
     		TradeBuilder.forEachLevel((level, tradeBuild) -> trades.get(level.intValue()).add(tradeBuild.build()));
     	}

@@ -14,4 +14,5 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModFood{
 	
 	public static Food STRAWBERRY = (new Food.Builder()).hunger(10).saturation(2f).effect(new EffectInstance(Effects.RESISTANCE, 6000, 5), 0.75f).build();
+	public static Food GRAPE = (new Food.Builder()).hunger(10).saturation(2f).effect(new EffectInstance(Effects.REGENERATION, 6000, 5), 0.75f).build();
 }

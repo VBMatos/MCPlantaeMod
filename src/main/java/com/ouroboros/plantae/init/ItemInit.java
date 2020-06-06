@@ -53,6 +53,7 @@ public class ItemInit {
 	
 	//Food
 	public static final Item strawberry = null;
+	public static final Item grape = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -92,6 +93,7 @@ public class ItemInit {
 		
 		//Food
 		registry.register(new Item(new Item.Properties().group(PLANTAE_GROUP).food(ModFood.STRAWBERRY)).setRegistryName("strawberry"));
+		registry.register(new Item(new Item.Properties().group(PLANTAE_GROUP).food(ModFood.GRAPE)).setRegistryName("grape"));
 	}
 }
 
