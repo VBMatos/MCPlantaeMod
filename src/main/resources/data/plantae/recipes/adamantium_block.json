@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AAA",
+		"AAA",
+		"AAA"
+	],
+	"key": {
+		"A": { "item": "plantae:adamantium_ingot" }
+	},
+	"result": {
+		"item": "plantae:adamantium_block"
+	}
+}
