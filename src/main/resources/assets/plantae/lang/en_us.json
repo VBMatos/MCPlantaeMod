@@ -36,6 +36,7 @@
 	"block.plantae.adamantium_block": "Block of Adamantium",
 	"block.plantae.meteoric_stone": "Meteoric Stone",
 	"block.plantae.vibranium_ore": "Vibranium Ore",
+	"block.plantae.vibranium_block": "Block of Vibranium",
 	
 	"entity.minecraft.villager.plantae.jeweller": "Jeweller"
 }

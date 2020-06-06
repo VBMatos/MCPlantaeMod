@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"VVV",
+		"VVV",
+		"VVV"
+	],
+	"key": {
+		"V": { "item": "plantae:vibranium_ingot" }
+	},
+	"result": {
+		"item": "plantae:vibranium_block"
+	}
+}

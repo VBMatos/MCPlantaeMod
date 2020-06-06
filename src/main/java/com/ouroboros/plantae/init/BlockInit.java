@@ -28,6 +28,7 @@ public class BlockInit {
 	public static final Block adamantium_block = null;
 	public static final Block meteoric_stone = null;
 	public static final Block vibranium_ore = null;
+	public static final Block vibranium_block = null;
 	
 	//Custom block model
 	public static final Block jeweller_workbench_block = null;
@@ -50,15 +51,19 @@ public class BlockInit {
 		//Metals
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("adamantium_block"));
+						.hardnessAndResistance(45.0F, 1500.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("adamantium_block"));
 		
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("meteoric_stone"));
+						.hardnessAndResistance(35.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("meteoric_stone"));
 		
 		event.getRegistry().register(
 				new Block(Block.Properties.create(Material.IRON)
-						.hardnessAndResistance(50.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_ore"));
+						.hardnessAndResistance(35.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_ore"));
+		
+		event.getRegistry().register(
+				new Block(Block.Properties.create(Material.IRON)
+						.hardnessAndResistance(30.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_block"));
 		
 		//Custom block model
 		event.getRegistry().register(
@@ -79,6 +84,7 @@ public class BlockInit {
 		event.getRegistry().register(new BlockItem(adamantium_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("adamantium_block"));
 		event.getRegistry().register(new BlockItem(meteoric_stone, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("meteoric_stone"));
 		event.getRegistry().register(new BlockItem(vibranium_ore, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_ore"));
+		event.getRegistry().register(new BlockItem(vibranium_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_block"));
 		
 		//Custom block models
 		event.getRegistry().register(new BlockItem(jeweller_workbench_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("jeweller_workbench_block"));
