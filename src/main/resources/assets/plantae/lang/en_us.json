@@ -37,6 +37,7 @@
 	"block.plantae.meteoric_stone": "Meteoric Stone",
 	"block.plantae.vibranium_ore": "Vibranium Ore",
 	"block.plantae.vibranium_block": "Block of Vibranium",
+	"block.plantae.vibranium_heated_block": "Block of Heated Vibranium",
 	
 	"entity.minecraft.villager.plantae.jeweller": "Jeweller"
 }

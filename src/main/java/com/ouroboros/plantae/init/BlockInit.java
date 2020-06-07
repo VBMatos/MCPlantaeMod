@@ -2,6 +2,7 @@ package com.ouroboros.plantae.init;
 
 import com.ouroboros.plantae.Plantae;
 import com.ouroboros.plantae.objects.blocks.JewellerWorkbench;
+import com.ouroboros.plantae.objects.blocks.VibraniumBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -29,6 +30,7 @@ public class BlockInit {
 	public static final Block meteoric_stone = null;
 	public static final Block vibranium_ore = null;
 	public static final Block vibranium_block = null;
+	public static final Block vibranium_heated_block = null;
 	
 	//Custom block model
 	public static final Block jeweller_workbench_block = null;
@@ -62,8 +64,12 @@ public class BlockInit {
 						.hardnessAndResistance(35.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_ore"));
 		
 		event.getRegistry().register(
-				new Block(Block.Properties.create(Material.IRON)
+				new VibraniumBlock(Block.Properties.create(Material.IRON)
 						.hardnessAndResistance(30.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)).setRegistryName("vibranium_block"));
+		
+		event.getRegistry().register(
+				new Block(Block.Properties.create(Material.IRON)
+						.hardnessAndResistance(30.0F, 1500.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).lightValue(10)).setRegistryName("vibranium_heated_block"));
 		
 		//Custom block model
 		event.getRegistry().register(
@@ -85,6 +91,7 @@ public class BlockInit {
 		event.getRegistry().register(new BlockItem(meteoric_stone, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("meteoric_stone"));
 		event.getRegistry().register(new BlockItem(vibranium_ore, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_ore"));
 		event.getRegistry().register(new BlockItem(vibranium_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_block"));
+		event.getRegistry().register(new BlockItem(vibranium_heated_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("vibranium_heated_block"));
 		
 		//Custom block models
 		event.getRegistry().register(new BlockItem(jeweller_workbench_block, new Item.Properties().group(PLANTAE_GROUP)).setRegistryName("jeweller_workbench_block"));
